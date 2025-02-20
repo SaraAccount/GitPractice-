@@ -27,7 +27,7 @@ namespace TREE
         public T GetValue() { return value; }
         public BinNode<T> GetLeft (){ return left; }
         public BinNode<T> GetRight (){ return right; }
-        public void SetValue(T value) { this.value = value;}
+        public void SetValue3(T value) { this.value = value;}
         public void SetLeft(BinNode<T> left) { this.left = left;}
         public void SetRight(BinNode<T> right) { this.right = right;}
         
