@@ -51,6 +51,10 @@ namespace ex._23
 
             // בדיקה אם הנקודה קיימת באחד הקווים
             Console.WriteLine($"the point {newPoint} in any line?---{d.AnyPointInLine(newPoint)}");
+
+
+            Console.WriteLine($"hi we are learning git\n and now we change here the program.");
+
         }
     }
 }
