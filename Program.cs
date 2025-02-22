@@ -6,7 +6,7 @@ namespace ex._23
     {
         static void Main(string[] args)
         {
-            // יצירת נקודות
+            //create point
             Point p1 = new Point(10, 10);
             Point p2 = new Point(5, 7);
             Point p3 = new Point(2, 3);
@@ -16,7 +16,7 @@ namespace ex._23
 
             Drawing d = new Drawing(10, 20);  // יצירת אובייקט Drawing עם 10 נקודות
 
-            // הוספת נקודות למערך
+            //add point to array
             d.AddPoint(p1);
             d.AddPoint(p2);
             d.AddPoint(p3);
@@ -24,10 +24,9 @@ namespace ex._23
             d.AddPoint(p5);
             d.AddPoint(p6);
 
-            // עכשיו, תוכל לגשת לנקודה במקום 5 (האינדקסים מתחילים מ-0)
-            Point n = d.GetPointN(5);  // מקבל את הנקודה במקום ה-5
+            Point n = d.GetPointN(5); 
 
-            // הדפסת הנקודה (אם היא לא null)
+            
             if (n != null)
             {
                 Console.WriteLine($"the point in place 5 is {n}");
@@ -37,20 +36,22 @@ namespace ex._23
                 Console.WriteLine("No point in place 5");
             }
 
-            // יצירת קו בין נקודות
+            //add a new line
             Line l = new Line(p1, p2);
-            // יצירת נקודה חדשה
+
+            //add a new point
             Point newPoint = new Point(5, 7);
 
-            // הוספת הנקודה החדשה
             d.AddPoint(newPoint);
 
-            // ספירת מספר הפעמים שהנקודה נמצאת בקווים
+            //counter the time that point found
             int count = d.PointInLines(newPoint);
             Console.WriteLine($"the point {newPoint} {count} times in the lines");
 
-            // בדיקה אם הנקודה קיימת באחד הקווים
+            //check if point find
             Console.WriteLine($"the point {newPoint} in any line?---{d.AnyPointInLine(newPoint)}");
+
+
         }
     }
 }
